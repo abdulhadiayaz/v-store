@@ -31,8 +31,8 @@ export default {
     }
   },
   head () {
-    const title = 'Voxel Store - '
-    const description = 'Voxel Store - products all electronics jewelery me clothing'
+    const title = 'Voxel Store'
+    const description = 'Voxel Store - A basic eCommerce store'
 
     return {
       title,
