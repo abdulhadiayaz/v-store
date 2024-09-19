@@ -41,11 +41,9 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("assets/bg-hero.png");
+  background-image: url("assets/images/bg-hero.png");
   background-position: center;
   background-size: cover;
-  filter: grayscale(100%) contrast(0.2) brightness(190%);
-  opacity: 0.5;
 }
 
 .welcome {
