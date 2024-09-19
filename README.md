@@ -2,6 +2,10 @@
 
 Demo can be seen at: https://v-store-qwxl.vercel.app/
 
+# TODO
+- Consolidate all static content into a separate file and reference it from there.
+- Implement a service for Axios and reuse it throughout the project.
+
 # Run:
 
 ```bash
