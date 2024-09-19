@@ -1,6 +1,6 @@
 ## Voxel store
 
-Demo can be seen at: 
+Demo can be seen at: https://v-store-qwxl.vercel.app/
 
 # Run:
 
