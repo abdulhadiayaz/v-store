@@ -1,17 +1,38 @@
 <template>
   <v-row justify="center" align="center" role="main">
-    <vox-hero role="banner" />
-    <vox-filter role="search" />
-    <vox-products :products="products" role="region" aria-label="Products" />
+    <Hero />
+    <Filter />
+    <Products :products="products" />
   </v-row>
 </template>
 
 <script>
+import Hero from '~/components/Hero.vue'
+import Filter from '~/components/Filter.vue'
+import Products from '~/components/Products.vue'
 export default {
   name: 'IndexPage',
+  components: {
+    Hero,
+    Filter,
+    Products
+  },
+  asyncData ({ app }) {
+    return app.$axios.$get('https://fakestoreapi.com/products')
+      .then(data => ({ products: data }))
+      .catch((error) => {
+        window.console.error('Error fetching product data:', error)
+        return { products: [] }
+      })
+  },
+  data () {
+    return {
+      products: []
+    }
+  },
   head () {
-    const title = 'Voxel Store'
-    const description = 'Voxel Store - A Basic e-Commerce Website'
+    const title = 'Voxel Store - '
+    const description = 'Voxel Store - products all electronics jewelery me clothing'
 
     return {
       title,
