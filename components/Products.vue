@@ -60,7 +60,7 @@ export default {
   },
   computed: {
     filteredProducts () {
-      const tab = this.$store.state.filter.tab
+      const tab = this.$store.state.filters.tab
       if (tab === 'all') {
         return this.products
       }

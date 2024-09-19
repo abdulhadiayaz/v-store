@@ -1,20 +1,20 @@
 <template>
   <v-row justify="center" align="center" role="main">
     <Hero />
-    <Filter />
+    <Filters />
     <Products :products="products" />
   </v-row>
 </template>
 
 <script>
 import Hero from '~/components/Hero.vue'
-import Filter from '~/components/Filter.vue'
+import Filters from '~/components/Filters.vue'
 import Products from '~/components/Products.vue'
 export default {
   name: 'IndexPage',
   components: {
     Hero,
-    Filter,
+    Filters,
     Products
   },
   asyncData ({ app }) {

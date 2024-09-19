@@ -2,7 +2,7 @@
   <v-col cols="12" class="no-padding">
     <div class="d-flex justify-center align-center">
       <v-tabs
-        :model-value="$store.state.filter.tab"
+        :model-value="$store.state.filters.tab"
         class="no-gutter max-width-1400 hide-on-mobile"
         color="#1A1A1A"
         align-tabs="center"
@@ -19,7 +19,7 @@
         </v-tab>
       </v-tabs>
       <v-select
-        :value="$store.state.filter.tab"
+        :value="$store.state.filters.tab"
         :items="categories"
         color="black"
         outlined
@@ -51,7 +51,7 @@ export default {
     }, 500)
   },
   methods: {
-    ...mapMutations('filter', ['setTab'])
+    ...mapMutations('filters', ['setTab'])
   }
 }
 </script>
